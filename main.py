@@ -2,7 +2,7 @@ from quopri import EMPTYSTRING
 
 from aiogram.exceptions import TelegramBadRequest
 from discord_webhook import DiscordWebhook, DiscordEmbed
-from aiogram import Bot, Dispatcher, types, Router
+from aiogram import Bot, Dispatcher, types, Router, F
 import asyncio
 from datetime import datetime
 from os import remove
@@ -49,7 +49,7 @@ def file_sender(file_name: str): # function for send user avatar image
 #     ---------------------------------------
 
 
-@rt.message()
+@rt.message(F.text)
 async def echo(message: types.Message):
     await message.answer("Please wait a bit")
 
@@ -91,7 +91,7 @@ async def echo(message: types.Message):
         print(e)
         await message.answer(f"Message was not sent to Discord :( \n"
                              f"Sending time: [{datetime.now().strftime('%H:%M')}]")
-    sleep(1)
+    await asyncio.sleep(0.5)
     try:
         remove(nickname) # remove user avatar
     except UnboundLocalError or FileNotFoundError:
@@ -102,3 +102,4 @@ async def echo(message: types.Message):
 
 if __name__ == "__main__": # initialize telegram bot
     asyncio.run(main())
+
