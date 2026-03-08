@@ -6,8 +6,8 @@
 ### _Пересылай сообщения из Telegram прямо в Discord_
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
-![aiogram](https://img.shields.io/badge/aiogram-3.x-blue?style=for-the-badge)
-![discord-webhook](https://img.shields.io/badge/discord--webhook-latest-7289DA?style=for-the-badge&logo=discord)
+![aiogram](https://img.shields.io/badge/aiogram-3.25.0-blue?style=for-the-badge)
+![discord-webhook](https://img.shields.io/badge/discord--webhook-1.4.1-7289DA?style=for-the-badge&logo=discord)
 
 </div>
 
